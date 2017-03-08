@@ -55,6 +55,7 @@ public class ControlActivity extends AppCompatActivity {
         //设置默认初值
         editSpeed.setText("100");
         editangle.setText("100");
+        imageView.setImageResource(R.drawable.line);
         //初始化时进行画图的配置
         DrawInit();
     }

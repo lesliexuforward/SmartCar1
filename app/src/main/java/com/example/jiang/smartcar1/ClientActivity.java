@@ -1,6 +1,7 @@
 package com.example.jiang.smartcar1;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.PrintStream;
 import java.net.Socket;
@@ -32,6 +33,7 @@ public class ClientActivity extends Activity{
     private Socket socket;
 
     public static OutputStream output;
+    public static InputStream intput;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -121,6 +123,8 @@ public class ClientActivity extends Activity{
 //            isSucceed=true;
             //get output Stream
             output = socket.getOutputStream();
+
+            intput=socket.getInputStream();
 //          output = new PrintStream(socket.getOutputStream(),true);
 
 
